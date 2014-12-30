@@ -1,0 +1,6 @@
+add_subdirectory(GraphicsRuntimeDx11Component)
+add_subdirectory(GraphicsRuntimeSharedComponent)
+add_subdirectory(GraphicsSceneComponent)
+add_subdirectory(GraphicsOpenGLComponent)
+add_subdirectory(GraphicsWorkbench)
+add_subdirectory(RayTracerComponent)

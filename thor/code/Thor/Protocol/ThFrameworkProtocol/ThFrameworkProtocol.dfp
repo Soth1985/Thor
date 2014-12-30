@@ -1,0 +1,5 @@
+FrameworkBase
+{
+	files = "ThFrameworkProtocol.dff";
+	real_type = float;
+}

@@ -1,0 +1,19 @@
+package Thor.ContentToolsProtocol;
+
+imports
+{
+	"ThContentPipelineProtocol/ThContentPipelineProtocol.dff"
+}
+
+cpp
+{
+	lib_header = "<Thor/ContentTools/GeometryTools/ThGeometryToolsExport.h>";
+	lib_macros = "THOR_GEOMETRY_TOOLS_DLL";
+}
+
+entity TheGeometryToolsRules : TheImportRules
+{
+	bool TriangulateMeshes = true;
+	bool TriangulateNurbs;
+	bool DontImportSceneGraph;
+}

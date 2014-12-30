@@ -1,0 +1,14 @@
+struct a
+{
+	/*int32 x=0
+	[
+		port = closed,
+		port = closed
+	];
+	mystruct y = {a=0,b=2,c={0.0,0.0,0.0}};
+	myenum e = myenum::val;*/
+	map<string, int> q=
+	{
+		{"a": 0}
+	}
+}

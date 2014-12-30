@@ -1,0 +1,1 @@
+#include <Thor/Framework/ThObjectArena.h>

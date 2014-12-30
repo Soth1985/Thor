@@ -1,0 +1,9 @@
+TestProtocol
+{
+ files = "TestProtocol.dff";
+ includes = "../";
+ real_type = float;
+ //filename_postfix = "Proto";
+ runtime_kind = rtk_simple;
+ //defines = PC;
+}

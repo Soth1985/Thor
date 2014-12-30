@@ -1,0 +1,5 @@
+add_subdirectory(Framework)
+add_subdirectory(ThorMath)
+add_subdirectory(Tests)
+add_subdirectory(Graphics)
+add_subdirectory(ContentTools)

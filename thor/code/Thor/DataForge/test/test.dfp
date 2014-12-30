@@ -1,0 +1,9 @@
+TestProject
+{
+ files = "big_test.dff";
+ includes = "E:/Programming/Projects/Thor/trunk/code/Thor/Protocol";
+ real_type = double;
+ filename_postfix = "Proto";
+ simple_fields_only = true;
+ defines = PC;
+}

@@ -1,0 +1,15 @@
+package Graphics;
+
+imports
+{
+	"i1.dff"
+}
+
+entity SceneNode
+{
+	vec4f Position;
+	quatf Normal;
+	vec3f Scale;
+}
+
+const float PI = 3.14123456;

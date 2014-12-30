@@ -1,0 +1,16 @@
+package Thor;
+
+cpp
+{
+	lib_header = "<Thor/Framework/FrameworkFwd.h>";
+	lib_macros = "THOR_FRAMEWORK_DLL";
+}
+
+entity ThFrameworkBaseEntity
+{
+}
+
+entity ThFrameworkRootEntity : ThFrameworkBaseEntity
+{
+	list< ref<ThFrameworkBaseEntity> > Children;
+}

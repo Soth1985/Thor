@@ -1,0 +1,117 @@
+package Thor.ContentToolsProtocol;
+
+cpp
+{
+	lib_header = "<Thor/ContentTools/ContentPipeline/ThContentPipelineExport.h>";
+	lib_macros = "THOR_CONTENT_PIPELINE_DLL";
+}
+
+struct ThsFileMetadataItem
+{
+	cstring Hash;
+	ref<TheImporterOptions> CachedOptions;
+}
+
+entity TheFileMetadata
+{
+	list<ThsFileMetadataItem> Items;
+}
+
+entity TheImportRules
+{
+	string ConfigurationName = "*";
+}
+
+entity TheContentLibrary
+{
+}
+
+struct ThsFileLink
+{
+	string Path;
+}
+
+entity TheImporterOptions
+{
+}
+
+entity TheContentPipelineRoot
+{
+	//configuration specific import options, map type name to options
+	map<cstring, list< ref<TheImportRules> > > ImportRules;
+}
+
+entity TheContentDb
+{
+	list< ref<TheContentLibrary> > ContentLibraries;
+}
+
+entity TheContentNode
+{
+	bool IsInMemory = true;
+	string Path;
+	cstring Hash;
+}
+
+entity TheGraphicsContent : TheContentNode
+{
+}
+
+entity TheGraphicsGeometryContent : TheGraphicsContent
+{
+}
+
+entity TheGraphicsLightContent : TheGraphicsContent
+{
+}
+
+entity TheGraphicsCameraContent : TheGraphicsContent
+{
+}
+
+entity TheGraphicsMaterialContent : TheGraphicsContent
+{
+}
+
+entity TheGraphicsTextureContent : TheGraphicsContent
+{
+}
+
+entity TheGraphicsContentLibrary : TheContentLibrary
+{
+	list< ref<TheGraphicsGeometryContent> > Geometries;
+	list< ref<TheGraphicsLightContent> > Lights;
+	list< ref<TheGraphicsMaterialContent> > Materials;
+	list< ref<TheGraphicsTextureContent> > Textures;
+	list< ref<TheGraphicsSceneNode> > Scenes;
+}
+
+entity TheGraphicsSceneNode : TheGraphicsContent
+{
+	vec3 LocalPosition;
+	vec3 LocalScale;
+	quat LocalRotation;
+
+	ref<TheGraphicsSceneNode> Parent;
+	list< ref<TheGraphicsSceneNode> > Children;
+}
+
+entity TheGraphicsGeometryNode : TheGraphicsSceneNode
+{
+	ref<TheGraphicsGeometryContent> Geometry;
+	list < ref<TheGraphicsMaterialContent> > Materials;
+}
+
+entity TheGraphicsLodNode : TheGraphicsSceneNode
+{
+}
+
+entity TheGraphicsLightNode : TheGraphicsSceneNode
+{
+	ref<TheGraphicsLightContent> Light;
+}
+
+entity TheGraphicsCameraNode : TheGraphicsSceneNode
+{
+	ref<TheGraphicsCameraContent> Camera;
+}

@@ -1,0 +1,5 @@
+/Users/victorair/ThorSvn/thor/code/Thor/DataForge/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttribute.cs
+/Users/victorair/ThorSvn/thor/bin/DotNet4/Debug_x86/DataForge.exe.mdb
+/Users/victorair/ThorSvn/thor/bin/DotNet4/Debug_x86/DataForge.exe
+/Users/victorair/ThorSvn/thor/code/Thor/DataForge/obj/x86/Debug/DataForge.exe
+/Users/victorair/ThorSvn/thor/code/Thor/DataForge/obj/x86/Debug/DataForge.exe.mdb

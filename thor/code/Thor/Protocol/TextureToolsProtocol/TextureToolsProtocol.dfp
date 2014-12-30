@@ -1,0 +1,7 @@
+TextureToolsProtocol
+{
+	files = "TextureToolsProtocol.dff";
+	includes = "../";
+	real_type = float;
+	runtime_kind = rtk_simple_thread_safe;
+}

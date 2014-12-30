@@ -1,0 +1,66 @@
+package Thor.Package0;
+
+imports
+{
+	"i2.dff"
+}
+
+cpp
+{
+	lib_header = "fwd.h";
+	lib_macros = "DLL";
+}
+
+enum MyEnum
+{
+	V1,
+	V2,
+	V3,
+	V4,
+	V5=101,
+	V6,
+	V7=608,
+	V8
+}
+
+struct st1[profile = PC]
+{
+	weak_ref<Graphics.SceneNode> node;
+	real rv = 1[profile = !PC];
+	MyEnum e = MyEnum::V1;
+	int32			ifield = -22
+	[
+		port = closed, //inout by default
+		no_serialize
+	];
+
+	string str = "boo";
+	list<float>		flist;//no initializer support in compiler for list,ref and map for now
+	map< string,list<float> > mymap;
+}
+
+struct st2: st1
+{
+	vec2f vec;
+}
+
+entity e1//entities can contain fields with built-in types and structs
+{
+	st1 myf1
+	[
+		commit_buffer = 0, // 0 is default
+		mutex = 0, //excludes commitBuffer, index of the mutex used to lock this object 
+		direct_access = true //no multithreading for this field, excludes mutex and commit_buffer, false by default
+	];
+	st2 myf12;
+	vec2f t = {1.0, 8.0};
+	float fc = Graphics.PI;
+}
+
+entity e2: e1
+{
+	MyEnum rr;
+	ref<Graphics.SceneNode> sn;
+}
+
+const float myConst = 5.0;

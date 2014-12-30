@@ -1,0 +1,1126 @@
+group DataForge;
+
+typeMapDualBuffer ::= [
+	"bool":"ThBoolField",
+	"float":"ThF32Field",
+	"double":"ThF64Field",
+	"real":"x",
+	"int64":"ThI64Field",
+	"int32":"ThI32Field",
+	"int16":"ThI16Field",
+	"int8":"ThI8Field",
+	"uint64":"ThU64Field",
+	"uint32":"ThU32Field",
+	"uint16":"ThU16Field",
+	"uint8":"ThU8Field",
+	"string":"ThWideStringField",
+	"cstring":"ThStringField",
+		
+	"vec2":"x",
+	"vec3":"x",
+	"vec4":"x",
+	"mat2x2":"x",
+	"mat3x3":"x",
+	"mat4x4":"x",
+	"quat":"x",
+	
+	"vec2f":"ThVec2Field",
+	"vec3f":"ThVec3Field",
+	"vec4f":"ThVec4Field",	
+	"mat2x2f":"ThMat2x2Field",
+	"mat3x3f":"ThMat3x3Field",
+	"mat4x4f":"ThMat4x4Field",
+	"quatf":"ThQuatField",
+	
+	"vec2d":"ThVec2dField",
+	"vec3d":"ThVec3dField",
+	"vec4d":"ThVec4dField",	
+	"mat2x2d":"ThMat2x2dField",
+	"mat3x3d":"ThMat3x3dField",
+	"mat4x4d":"ThMat4x4dField",
+	"quatd":"ThQuatdField",
+	default:key
+]
+
+typeMapSimple ::= [
+	"bool":"ThBoolSimpleField",
+	"float":"ThF32SimpleField",
+	"double":"ThF64SimpleField",
+	"real":"x",
+	"int64":"ThI64SimpleField",
+	"int32":"ThI32SimpleField",
+	"int16":"ThI16SimpleField",
+	"int8":"ThI8SimpleField",
+	"uint64":"ThU64SimpleField",
+	"uint32":"ThU32SimpleField",
+	"uint16":"ThU16SimpleField",
+	"uint8":"ThU8SimpleField",
+	"string":"ThWideStringSimpleField",
+	"cstring":"ThStringSimpleField",
+		
+	"vec2":"x",
+	"vec3":"x",
+	"vec4":"x",
+	"mat2x2":"x",
+	"mat3x3":"x",
+	"mat4x4":"x",
+	"quat":"x",
+	
+	"vec2f":"ThVec2SimpleField",
+	"vec3f":"ThVec3SimpleField",
+	"vec4f":"ThVec4SimpleField",	
+	"mat2x2f":"ThMat2x2SimpleField",
+	"mat3x3f":"ThMat3x3SimpleField",
+	"mat4x4f":"ThMat4x4SimpleField",
+	"quatf":"ThQuatSimpleField",
+	
+	"vec2d":"ThVec2dSimpleField",
+	"vec3d":"ThVec3dSimpleField",
+	"vec4d":"ThVec4dSimpleField",	
+	"mat2x2d":"ThMat2x2dSimpleField",
+	"mat3x3d":"ThMat3x3dSimpleField",
+	"mat4x4d":"ThMat4x4dSimpleField",
+	"quatd":"ThQuatdSimpleField",
+	default:key
+]
+
+typeMapSimpleThreadSafe ::= [
+	"bool":"ThBoolSimpleFieldThreadSafe",
+	"float":"ThF32SimpleFieldThreadSafe",
+	"double":"ThF64SimpleFieldThreadSafe",
+	"real":"x",
+	"int64":"ThI64SimpleFieldThreadSafe",
+	"int32":"ThI32SimpleFieldThreadSafe",
+	"int16":"ThI16SimpleFieldThreadSafe",
+	"int8":"ThI8SimpleFieldThreadSafe",
+	"uint64":"ThU64SimpleFieldThreadSafe",
+	"uint32":"ThU32SimpleFieldThreadSafe",
+	"uint16":"ThU16SimpleFieldThreadSafe",
+	"uint8":"ThU8SimpleFieldThreadSafe",
+	"string":"ThWideStringSimpleFieldThreadSafe",
+	"cstring":"ThStringSimpleFieldThreadSafe",
+		
+	"vec2":"x",
+	"vec3":"x",
+	"vec4":"x",
+	"mat2x2":"x",
+	"mat3x3":"x",
+	"mat4x4":"x",
+	"quat":"x",
+	
+	"vec2f":"ThVec2SimpleFieldThreadSafe",
+	"vec3f":"ThVec3SimpleFieldThreadSafe",
+	"vec4f":"ThVec4SimpleFieldThreadSafe",	
+	"mat2x2f":"ThMat2x2SimpleFieldThreadSafe",
+	"mat3x3f":"ThMat3x3SimpleFieldThreadSafe",
+	"mat4x4f":"ThMat4x4SimpleFieldThreadSafe",
+	"quatf":"ThQuatSimpleFieldThreadSafe",
+	
+	"vec2d":"ThVec2dSimpleFieldThreadSafe",
+	"vec3d":"ThVec3dSimpleFieldThreadSafe",
+	"vec4d":"ThVec4dSimpleFieldThreadSafe",	
+	"mat2x2d":"ThMat2x2dSimpleFieldThreadSafe",
+	"mat3x3d":"ThMat3x3dSimpleFieldThreadSafe",
+	"mat4x4d":"ThMat4x4dSimpleFieldThreadSafe",
+	"quatd":"ThQuatdSimpleFieldThreadSafe",
+	default:key
+]
+
+valueTypeMap ::= [
+	"bool":"ThBool",
+	"float":"ThF32",
+	"double":"ThF64",
+	"real":"x",
+	"int64":"ThI64",
+	"int32":"ThI32",
+	"int16":"ThI16",
+	"int8":"ThI8",
+	"uint64":"ThU64",
+	"uint32":"ThU32",
+	"uint16":"ThU16",
+	"uint8":"ThU8",
+	"string":"ThWideString",
+	"cstring":"ThString",
+		
+	"vec2":"x",
+	"vec3":"x",
+	"vec4":"x",
+	"mat2x2":"x",
+	"mat3x3":"x",
+	"mat4x4":"x",
+	"quat":"x",
+	
+	"vec2f":"ThVec2",
+	"vec3f":"ThVec3",
+	"vec4f":"ThVec4",	
+	"mat2x2f":"ThMat2x2",
+	"mat3x3f":"ThMat3x3",
+	"mat4x4f":"ThMat4x4",
+	"quatf":"ThQuat",
+	
+	"vec2d":"ThVec2d",
+	"vec3d":"ThVec3d",
+	"vec4d":"ThVec4d",	
+	"mat2x2d":"ThMat2x2d",
+	"mat3x3d":"ThMat3x3d",
+	"mat4x4d":"ThMat4x4d",
+	"quatd":"ThQuatd",
+	default:key
+]
+
+defaultValues ::= [
+	"bool":"false",
+	"float":"0.0f",
+	"double":"0.0",
+	"real":"x",
+	"int64":"0",
+	"int32":"0",
+	"int16":"0",
+	"int8":"0",
+	"uint64":"0",
+	"uint32":"0",
+	"uint16":"0",
+	"uint8":"0",
+	/*"string":"ThU16String",
+	"cstring":"ThString",
+		
+	"vec2":"x",
+	"vec3":"x",
+	"vec4":"x",
+	"mat2x2":"x",
+	"mat3x3":"x",
+	"mat4x4":"x",
+	"quat":"x",
+	
+	"vec2f":"Vec2",
+	"vec3f":"Vec3",
+	"vec4f":"Vec4",	
+	"mat2x2f":"Mat2x2",
+	"mat3x3f":"Mat3x3",
+	"mat4x4f":"Mat4x4",
+	"quatf":"Quat",
+	
+	"vec2d":"Vec2d",
+	"vec3d":"Vec2d",
+	"vec4d":"Vec2d",	
+	"mat2x2d":"Mat2x2d",
+	"mat3x3d":"Mat3x3d",
+	"mat4x4d":"Mat4x4d",
+	"quatd":"Quatd",*/
+	default:key
+]
+
+initter(type, constants) ::= <<
+<if(type)>
+<type>( <constants :{c | <c>}; separator = ","> )
+<else>
+<constants>
+<endif>
+>>
+
+rttiDeclaration(package, name) ::= <<
+THOR_DECL_TYPE(<package>::<name>);
+>>
+
+deserializationConstructor(package, name) ::= <<
+template\<\>
+struct CreateClassInstance\< <package>::<name>, false \>
+{
+	static void* Create(ThU32 param)
+	{
+		if (param == 0)
+			return new <package>::<name>();
+		else
+		{
+			ThUUID uuid(0);
+			return new <package>::<name>(uuid);
+		}
+	}
+};
+>>
+
+forwardDeclaration(isEntity, name) ::= <<
+<if(isEntity)>
+class <name>;
+typedef ThRefPtr\< <name> \> <name>Ptr;
+typedef ThWeakPtr\< <name> \> <name>WeakPtr;<\n>
+<else>
+class <name>;<\n>
+<endif>
+>>
+
+header(name, forwardDeclarations, declarations, includes, rttiDeclarations, deserializationConstructors) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					This file is autogenerated by DataForge compiler.
+//
+//----------------------------------------------------------------------------------------
+#pragma once
+
+#include \<Thor/Framework/DataModel/ThDataModel.h\>
+
+<includes: {it | #include <it>} ; separator = "\n">
+
+<name : {n | namespace <n>\{ }>
+
+	<forwardDeclarations: {it | <it>} ; separator = "\n">
+	
+	<declarations; separator="\n">
+<name : {n | \} }>
+
+namespace Thor
+{
+	<rttiDeclarations; separator = "\n">
+
+	namespace Private
+	{
+		<deserializationConstructors; separator = "\n">
+	}
+}
+>>
+
+source(name, includes, declarations) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					This file is autogenerated by DataForge compiler.
+//
+//----------------------------------------------------------------------------------------
+<includes: {it | #include "<it>"} ; separator = "\n">
+
+<name : {n | namespace <n>\{ }>
+
+	<declarations; separator="\n">
+<name : {n | \} }>
+>>
+
+enumItem(name, value, index) ::=<<
+>>
+
+enumH(libMacros, package, name, enumItems) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					e<name>
+//
+//----------------------------------------------------------------------------------------
+struct e<name>
+{
+	enum Val
+	{
+		<enumItems: {eIt | <eIt.name> = <eIt.value>} ; separator = ",\n">
+	};
+};
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+class <libMacros> <name> : public ThiEnumDualBufferField
+{
+public:
+
+	typedef ThU32 ValueType;
+
+	<name>();
+
+	<name>(const ValueType& value);
+
+	<name>(const <name>& other);
+
+	const <name>& operator=(const <name>& other);
+
+	const <name>& operator=(const e<name>::Val other);
+	
+	virtual const char* GetEnumName()const;
+
+	virtual ThBool IsFlags()const;
+
+	virtual ThSize GetNumItems()const;
+
+	virtual ThU32 GetItemValue(ThSize index);
+
+	virtual const char* GetItemName(ThSize index);
+
+	virtual ThiType* GetEnumType()const;
+	
+	void SetValueEnum(e<name>::Val val)
+	{
+		SetValue((ThU32)val);
+	}
+	
+	e<name>::Val GetValueEnum()const
+	{
+		return (e<name>::Val)GetValue();
+	}
+
+#ifdef THOR_DM_THIFIELD_NOVIRTUALS
+	friend struct Private::ThiFieldInternalAccess;
+#endif
+};
+//----------------------------------------------------------------------------------------
+//
+//					<name>Simple
+//
+//----------------------------------------------------------------------------------------
+class <libMacros> <name>Simple : public ThiEnumSimpleField
+{
+public:
+
+	typedef ThU32 ValueType;
+
+	<name>Simple();
+
+	<name>Simple(const ValueType& value);
+
+	<name>Simple(const <name>Simple& other);
+
+	const <name>Simple& operator=(const <name>Simple& other);
+
+	const <name>Simple& operator=(const e<name>::Val other);
+	
+	virtual const char* GetEnumName()const;
+
+	virtual ThBool IsFlags()const;
+
+	virtual ThSize GetNumItems()const;
+
+	virtual ThU32 GetItemValue(ThSize index);
+
+	virtual const char* GetItemName(ThSize index);
+
+	virtual ThiType* GetEnumType()const;
+	
+	void SetValueEnum(e<name>::Val val)
+	{
+		SetValue((ThU32)val);
+	}
+	
+	e<name>::Val GetValueEnum()const
+	{
+		return (e<name>::Val)GetValue();
+	}
+
+#ifdef THOR_DM_THIFIELD_NOVIRTUALS
+	friend struct Private::ThiFieldInternalAccess;
+#endif
+};
+//----------------------------------------------------------------------------------------
+//
+//					<name>SimpleThreadSafe
+//
+//----------------------------------------------------------------------------------------
+class <libMacros> <name>SimpleThreadSafe : public ThiEnumSimpleFieldThreadSafe
+{
+public:
+
+	typedef ThU32 ValueType;
+
+	<name>SimpleThreadSafe();
+
+	<name>SimpleThreadSafe(const ValueType& value);
+
+	<name>SimpleThreadSafe(const <name>SimpleThreadSafe& other);
+
+	const <name>SimpleThreadSafe& operator=(const <name>SimpleThreadSafe& other);
+
+	const <name>SimpleThreadSafe& operator=(const e<name>::Val other);
+	
+	virtual const char* GetEnumName()const;
+
+	virtual ThBool IsFlags()const;
+
+	virtual ThSize GetNumItems()const;
+
+	virtual ThU32 GetItemValue(ThSize index);
+
+	virtual const char* GetItemName(ThSize index);
+
+	virtual ThiType* GetEnumType()const;
+	
+	void SetValueEnum(e<name>::Val val)
+	{
+		SetValue((ThU32)val);
+	}
+	
+	e<name>::Val GetValueEnum()const
+	{
+		return (e<name>::Val)GetValue();
+	}
+
+#ifdef THOR_DM_THIFIELD_NOVIRTUALS
+	friend struct Private::ThiFieldInternalAccess;
+#endif
+};
+>>
+
+enumCPP(package, name, enumItems) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+THOR_REG_TYPE(<name>, THOR_TYPELIST_1(ThiEnumDualBufferField));
+
+<name>::<name>()
+	:
+ThiEnumDualBufferField()
+{
+}
+
+<name>::<name>(const ValueType& value)
+	:
+ThiEnumDualBufferField(value)
+{
+}
+
+<name>::<name>(const <name>& other)
+	:
+ThiEnumDualBufferField(other.GetValue())
+{
+}
+
+const <name>& <name>::operator=(const <name>& other)
+{
+	SetValue(other.GetValue());
+	return *this;
+}
+
+const <name>& <name>::operator=(const e<name>::Val other)
+{
+	SetValueEnum(other);
+	return *this;
+}
+
+const char* <name>::GetEnumName()const
+{
+	return "<package>::<name>";
+}
+
+ThBool <name>::IsFlags()const
+{
+	return false;
+}
+
+ThSize <name>::GetNumItems()const
+{
+	return <length(enumItems)>;
+}
+
+ThU32 <name>::GetItemValue(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return <e.value>;} ; separator = "\n">
+	}
+
+	return -1;
+}
+
+const char* <name>::GetItemName(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return "<e.name>";} ; separator = "\n">
+	}
+
+	return 0;
+}
+
+ThiType* <name>::GetEnumType()const
+{
+	return ThType\<<name>\>::Instance();
+}
+//----------------------------------------------------------------------------------------
+//
+//					<name>Simple
+//
+//----------------------------------------------------------------------------------------
+THOR_REG_TYPE(<name>Simple, THOR_TYPELIST_1(ThiEnumSimpleField));
+
+<name>Simple::<name>Simple()
+	:
+ThiEnumSimpleField()
+{
+}
+
+<name>Simple::<name>Simple(const ValueType& value)
+	:
+ThiEnumSimpleField(value)
+{
+}
+
+<name>Simple::<name>Simple(const <name>Simple& other)
+	:
+ThiEnumSimpleField(other.GetValue())
+{
+}
+
+const <name>Simple& <name>Simple::operator=(const <name>Simple& other)
+{
+	SetValue(other.GetValue());
+	return *this;
+}
+
+const <name>Simple& <name>Simple::operator=(const e<name>::Val other)
+{
+	SetValueEnum(other);
+	return *this;
+}
+
+const char* <name>Simple::GetEnumName()const
+{
+	return "<package>::<name>";
+}
+
+ThBool <name>Simple::IsFlags()const
+{
+	return false;
+}
+
+ThSize <name>Simple::GetNumItems()const
+{
+	return <length(enumItems)>;
+}
+
+ThU32 <name>Simple::GetItemValue(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return <e.value>;} ; separator = "\n">
+	}
+
+	return -1;
+}
+
+const char* <name>Simple::GetItemName(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return "<e.name>";} ; separator = "\n">
+	}
+
+	return 0;
+}
+
+ThiType* <name>Simple::GetEnumType()const
+{
+	return ThType\<<name>\>::Instance();
+}
+//----------------------------------------------------------------------------------------
+//
+//					<name>SimpleThreadSafe
+//
+//----------------------------------------------------------------------------------------
+THOR_REG_TYPE(<name>SimpleThreadSafe, THOR_TYPELIST_1(ThiEnumSimpleFieldThreadSafe));
+
+<name>SimpleThreadSafe::<name>SimpleThreadSafe()
+	:
+ThiEnumSimpleFieldThreadSafe()
+{
+}
+
+<name>SimpleThreadSafe::<name>SimpleThreadSafe(const ValueType& value)
+	:
+ThiEnumSimpleFieldThreadSafe(value)
+{
+}
+
+<name>SimpleThreadSafe::<name>SimpleThreadSafe(const <name>SimpleThreadSafe& other)
+	:
+ThiEnumSimpleFieldThreadSafe(other.GetValue())
+{
+}
+
+const <name>SimpleThreadSafe& <name>SimpleThreadSafe::operator=(const <name>SimpleThreadSafe& other)
+{
+	SetValue(other.GetValue());
+	return *this;
+}
+
+const <name>SimpleThreadSafe& <name>SimpleThreadSafe::operator=(const e<name>::Val other)
+{
+	SetValueEnum(other);
+	return *this;
+}
+
+const char* <name>SimpleThreadSafe::GetEnumName()const
+{
+	return "<package>::<name>";
+}
+
+ThBool <name>SimpleThreadSafe::IsFlags()const
+{
+	return false;
+}
+
+ThSize <name>SimpleThreadSafe::GetNumItems()const
+{
+	return <length(enumItems)>;
+}
+
+ThU32 <name>SimpleThreadSafe::GetItemValue(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return <e.value>;} ; separator = "\n">
+	}
+
+	return -1;
+}
+
+const char* <name>SimpleThreadSafe::GetItemName(ThSize index)
+{
+	switch(index)
+	{
+		<enumItems: {e | case <e.index>: return "<e.name>";} ; separator = "\n">
+	}
+
+	return 0;
+}
+
+ThiType* <name>SimpleThreadSafe::GetEnumType()const
+{
+	return ThType\<<name>\>::Instance();
+}
+>>
+
+fieldH(package, name, type, isMap, isStruct, isList, isRef, isWeakRef, keyType, valueType) ::= <<
+typedef <type> <name>Typename;
+<name>Typename <name>;
+>>
+
+fieldCPP(package, name, type, initVal, index, isMap, isStruct, isList, isRef, isWeakRef, noSerialize) ::= <<
+<if(initVal)><name>(<initVal>)<else><name>()<endif>
+>>
+
+getFieldImpl() ::= <<
+<if(fields)>
+switch(idx)
+{
+	<fields: {f | case <f.index>: return &<f.name>;} ; separator = "\n">
+<if(base)>
+	default:
+		return <base.name>::GetField(idx);<\n>
+<endif>
+}
+
+return 0;
+<else>
+return 0;
+<endif>
+>>
+
+getFieldNameImpl() ::= <<
+<if(fields)>
+switch(idx)
+{
+	<fields: {f | case <f.index>: return "<f.name>";} ; separator = "\n">
+<if(base)>
+	default:
+		return <base.name>::GetFieldName(idx);<\n>
+<endif>
+}
+
+return 0;
+<else>
+return 0;
+<endif>
+>>
+
+getFieldTypeImpl() ::= <<
+<if(fields)>
+switch(idx)
+{
+	<fields: {f | case <f.index>: return <f.name>.GetType();} ; separator = "\n">
+<if(base)>
+	default:
+		return <base.name>::GetFieldType(idx);<\n>
+<endif>
+}
+
+return 0;
+<else>
+return 0;
+<endif>
+>>
+
+pushImpl() ::= <<
+<if(base)>
+<base.name>::Push();
+<endif>
+
+<if(fields)>
+<fields: {f | if(<f.name>.IsDirty())Private::ThiFieldInternalAccess::Push(&<f.name>);<\n>}>
+<endif>
+>>
+
+getNumFieldsImpl() ::= <<
+<if(base)>
+return <base.name>::GetNumFields() + <length(fields)>;
+<else>
+return <length(fields)>;
+<endif>
+>>
+
+operatorEqImpl() ::= <<
+<if(base)>
+if(!<base.name>::operator==(other))
+	return false;
+<endif>
+
+<if(fields)>
+if(<fields: {f | <f.name> == other.<f.name>} ; separator = " &&\n">)
+	return true;
+else
+	return false;
+<else>
+return true;
+<endif>
+>>
+
+isDirtyImpl() ::= <<
+<if(base)>
+if(<base.name>::IsDirty())
+	return true;
+<endif>
+
+<if(fields)>
+if(<fields: {f | <f.name>.IsDirty()} ; separator = " ||\n">)
+	return true;
+<endif>
+
+return false;
+>>
+
+isDefaultValueImpl() ::= <<
+<if(base)>
+if(<base.name>::IsDefaultValue())
+	return true;
+<endif>
+
+<if(fields)>
+if(<fields: {f | !<f.name>.IsDefaultValue()} ; separator = " ||\n">)
+	return true;
+<endif>
+
+return false;
+>>
+
+serializeEntityImpl() ::= <<
+<if(base)>
+<base.name>::SerializeSubentity(archive);
+<endif>
+
+<if(fields)>
+archive->WriteBeginSubentity("<package>::<name>");
+<fields: {f | <if(f.noSerialize)><else>if(!<f.name>.IsDefaultValue())<f.name>.Serialize(archive, "<f.name>");<\n><endif>}>
+archive->WriteEndSubentity("<package>::<name>");
+<endif>
+>>
+
+serializeStructImpl() ::= <<
+<if(base)>
+<base.name>::SerializeSubstructure(archive);
+<endif>
+
+<if(fields)>
+archive->WriteBeginSubstructure("<package>::<name>");
+<fields: {f | <if(f.noSerialize)><else>if(!<f.name>.IsDefaultValue())<f.name>.Serialize(archive, "<f.name>");<\n><endif>}>
+archive->WriteEndSubstructure("<package>::<name>");
+<endif>
+>>
+
+deserializeEntityImpl() ::= <<
+<if(base)>
+<base.name>::DeserializeSubentity(archive);
+<endif>
+
+<if(fields)>
+if(archive->ReadBeginSubentity("<package>::<name>"))
+{
+	<fields: {f | <if(f.noSerialize)><else><f.name>.Deserialize(archive, "<f.name>");<\n><endif>}>
+	archive->ReadEndSubentity("<package>::<name>");
+}
+<endif>
+>>
+
+deserializeStructImpl() ::= <<
+<if(base)>
+<base.name>::DeserializeSubstructure(archive);
+<endif>
+
+<if(fields)>
+if(archive->ReadBeginSubstructure("<package>::<name>"))
+{
+	<fields: {f | <if(f.noSerialize)><else><f.name>.Deserialize(archive, "<f.name>");<\n><endif>}>
+	archive->ReadEndSubstructure("<package>::<name>");
+}
+<endif>
+>>
+
+entityH(libMacros, package, name, base, fields) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+class <libMacros> <name> : public <if(base)><base.name><else>ThiEntity<endif>
+{
+public:
+
+	typedef <name> ValueType;
+
+	<name>();
+
+	<name>(const ThUUID& uuid);
+
+	ThBool operator==(const <name>& other)const;
+
+	ThBool operator!=(const <name>& other)const;
+
+	virtual ThSize		GetNumFields()const;
+
+	virtual ThiField*	GetField(ThSize idx);
+
+	virtual const char*	GetFieldName(ThSize idx)const;
+
+	virtual ThiType*	GetFieldType(ThSize idx)const;
+
+	virtual ThiType*	GetType()const;
+	
+	<fields; separator="\n">
+
+protected:
+
+	virtual void SerializeSubentity(ThiArchiveWriter* archive)const;
+
+	virtual void DeserializeSubentity(ThiArchiveReader* archive);
+
+	virtual void Push();
+
+	virtual ThBool EqualsImpl(const ThiEntity* other)const;
+};
+>>
+
+entityCPP(package, name, base, fields) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+<if(base)>
+THOR_REG_TYPE(<name>, THOR_TYPELIST_1(<base.name>));
+<else>
+THOR_REG_TYPE(<name>, THOR_TYPELIST_1(ThiEntity));
+<endif>
+<\n>
+<name>::<name>()
+<if(fields)>
+	:
+<fields; separator = ",\n">
+<endif>
+
+{
+}
+
+<name>::<name>(const ThUUID& uuid)
+<if(base)>:<base.name>(uuid)<else>:ThiEntity(uuid)<endif>
+<if(fields)>
+,
+<fields; separator = ",\n">
+<endif>
+
+{
+}
+
+ThBool <name>::operator==(const <name>& other)const
+{
+	<operatorEqImpl()>
+}
+
+ThBool <name>::operator!=(const <name>& other)const
+{
+	return !operator==(other);
+}
+
+ThBool <name>::EqualsImpl(const ThiEntity* other)const
+{
+	<name>* otherCast = TypeCast\< <name> \>(const_cast\<ThiEntity*\>(other));
+
+	if (otherCast)
+	{
+		return operator==(*otherCast);
+	}
+
+	return false;
+}
+
+ThiType* <name>::GetType()const
+{
+	return ThType\< <name> \>::Instance();
+}
+
+ThSize <name>::GetNumFields()const
+{
+	<getNumFieldsImpl()>
+}
+
+ThiField* <name>::GetField(ThSize idx)
+{
+	<getFieldImpl()>
+}
+
+const char*	<name>::GetFieldName(ThSize idx)const
+{
+	<getFieldNameImpl()>
+}
+
+ThiType* <name>::GetFieldType(ThSize idx)const
+{
+	<getFieldTypeImpl()>
+}
+
+void <name>::Push()
+{
+	<pushImpl()>
+}
+
+void <name>::SerializeSubentity(ThiArchiveWriter* archive)const
+{
+	<serializeEntityImpl()>
+}
+
+void <name>::DeserializeSubentity(ThiArchiveReader* archive)
+{
+	<deserializeEntityImpl()>
+}
+>>
+
+structH(libMacros, package, name, base, fields) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+class <libMacros> <name>: public <if(base)><base.name><else>ThiStructField<endif>
+{
+public:
+
+	typedef <name> ValueType;
+
+	<name>();
+
+	ThBool operator==(const <name>& other)const;
+
+	ThBool operator!=(const <name>& other)const;
+
+	virtual ThSize			GetNumFields()const;
+
+	virtual ThiField*		GetField(ThSize idx);
+
+	virtual const char*		GetFieldName(ThSize idx)const;
+
+	virtual ThiType*		GetFieldType(ThSize idx)const;
+
+	virtual ThiType*		GetStructType()const;
+
+	ThBool					IsDirty()const;
+
+	ThBool					IsDefaultValue()const;
+	
+	<fields; separator="\n">
+
+protected:
+
+	virtual void SerializeSubstructure(ThiArchiveWriter* archive)const;
+
+	virtual void DeserializeSubstructure(ThiArchiveReader* archive);
+
+#ifdef THOR_DM_THIFIELD_NOVIRTUALS
+	friend struct Private::ThiFieldInternalAccess;
+#endif
+
+	virtual void Push();
+};
+>>
+
+structCPP(package, name, base, fields) ::= <<
+//----------------------------------------------------------------------------------------
+//
+//					<name>
+//
+//----------------------------------------------------------------------------------------
+<if(base)>
+THOR_REG_TYPE(<name>, THOR_TYPELIST_1(<base.name>));
+<else>
+THOR_REG_TYPE(<name>, THOR_TYPELIST_1(ThiStructField));
+<endif>
+<\n>
+<name>::<name>()
+<if(fields)>
+	:
+<fields; separator=",\n">
+<endif>
+
+{
+}
+
+ThBool <name>::operator==(const <name>& other)const
+{
+	<operatorEqImpl()>
+}
+
+ThBool <name>::operator!=(const <name>& other)const
+{
+	return !operator==(other);
+}
+
+ThSize <name>::GetNumFields()const
+{
+	<getNumFieldsImpl()>
+}
+
+ThiField* <name>::GetField(ThSize idx)
+{
+	<getFieldImpl()>
+}
+
+const char*	<name>::GetFieldName(ThSize idx)const
+{
+	<getFieldNameImpl()>
+}
+
+ThiType* <name>::GetFieldType(ThSize idx)const
+{
+	<getFieldTypeImpl()>
+}
+
+void <name>::Push()
+{
+	<pushImpl()>
+}
+
+ThBool <name>::IsDirty()const
+{
+	<isDirtyImpl()>
+}
+
+ThBool <name>::IsDefaultValue()const
+{
+	<isDefaultValueImpl()>
+}
+
+void <name>::SerializeSubstructure(ThiArchiveWriter* archive)const
+{
+	<serializeStructImpl()>
+}
+
+void <name>::DeserializeSubstructure(ThiArchiveReader* archive)
+{
+	<deserializeStructImpl()>
+}
+
+ThiType* <name>::GetStructType()const
+{
+	return ThType\<<name>\>::Instance();
+}
+>>
